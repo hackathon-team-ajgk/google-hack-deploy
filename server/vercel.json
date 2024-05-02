@@ -34,9 +34,5 @@
         }
       ]
     }
-  ],
-  "ignore": [
-    "services/**",
-    "utils/**"
   ]
 }
