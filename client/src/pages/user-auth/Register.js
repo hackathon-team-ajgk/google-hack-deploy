@@ -13,7 +13,7 @@ function Register() {
   const registerUser = async (userData) => {
     try {
       const response = await axios.post(
-        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/register",
+        `${process.env.API_URL}/register`,
         userData
       );
       console.log("Registration Successful", response.data);

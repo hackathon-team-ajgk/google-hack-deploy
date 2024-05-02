@@ -18,7 +18,7 @@ function YourList() {
       setIsLoading(true);
       const token = getToken();
       const response = await axios.get(
-        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/getRecommendations-list",
+        `${process.env.API_URL}/getRecommendations-list`,
         {
           headers: {
             authorization: token,
@@ -49,7 +49,7 @@ function YourList() {
         const token = getToken();
         const username = getUsername();
         const response = await axios.get(
-          "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/getUserMovieData",
+          `${process.env.API_URL}/getUserMovieData`,
           {
             headers: {
               authorization: token,

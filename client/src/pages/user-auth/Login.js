@@ -14,7 +14,7 @@ function Login() {
   const loginUser = async (credentials) => {
     try {
       const response = await axios.post(
-        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/login",
+        `${process.env.API_URL}/login`,
         credentials
       );
 

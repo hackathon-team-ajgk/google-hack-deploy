@@ -16,7 +16,7 @@ function Movies() {
     const getTrendingMovies = async () => {
       try {
         const response = await axios.get(
-          "https://google-hackathon-dbr4l55rs-aejgk.vercel.app//getTrendingMovies"
+          `${process.env.API_URL}/getTrendingMovies`
         );
 
         const movies = response.data.movie;
@@ -45,7 +45,7 @@ function Movies() {
     const getPopularMovies = async () => {
       try {
         const response = await axios.get(
-          "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/getPopularMovies"
+          `${process.env.API_URL}/getPopularMovies`
         );
         const movies = response.data.movie;
         setPopularMovies(movies);
