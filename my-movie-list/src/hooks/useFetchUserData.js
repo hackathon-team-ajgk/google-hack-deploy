@@ -11,11 +11,14 @@ export function useFetchUserData() {
       const getUserInfo = async () => {
         try {
           const token = getToken();
-          const response = await axios.get("http://localhost:3000/user", {
-            headers: {
-              authorization: token,
-            },
-          });
+          const response = await axios.get(
+            "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/user",
+            {
+              headers: {
+                authorization: token,
+              },
+            }
+          );
           setUserData(response.data[0]);
         } catch (error) {
           if (error.response) {

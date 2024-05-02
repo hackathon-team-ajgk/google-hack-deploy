@@ -37,7 +37,7 @@ function MovieRecs({ onChange }) {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        "http://localhost:3000/getRecommendations-genre",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/getRecommendations-genre",
         {
           params: { genre: genre },
         }

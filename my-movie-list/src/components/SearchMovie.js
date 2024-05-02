@@ -15,7 +15,7 @@ function SearchMovie({ onSearch }) {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        "http://localhost:3000/getMoviesFromSearch",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/getMoviesFromSearch",
         {
           params: { movie: searchedMovie },
         }

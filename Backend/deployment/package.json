@@ -1,6 +1,7 @@
 {
   "scripts": {
     "devStart": "nodemon serverExperimental.js",
+    "start": "nodemon serverJWT.js",
     "build": "",
     "deploy": "gh-pages -d dist"
   },

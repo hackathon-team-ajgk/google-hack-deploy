@@ -28,7 +28,7 @@ function UserProfile() {
     try {
       const token = getToken();
       const response = await axios.put(
-        "http://localhost:3000/changeBio",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/changeBio",
         userDetails,
         {
           headers: {
@@ -66,7 +66,7 @@ function UserProfile() {
     try {
       const token = getToken();
       const response = await axios.delete(
-        "http://localhost:3000/delete-account",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/delete-account",
         {
           headers: {
             authorization: token,

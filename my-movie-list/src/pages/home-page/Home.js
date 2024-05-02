@@ -27,7 +27,7 @@ function Home() {
     const getTrendingMovies = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/getTrendingMovies"
+          "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/getTrendingMovies"
         );
         const movies = response.data.movie;
         storeTrendingMovies(movies);

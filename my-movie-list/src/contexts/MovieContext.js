@@ -14,7 +14,7 @@ export const MovieProvider = ({ children }) => {
       const token = getToken();
       const username = getUsername();
       const response = await axios.put(
-        "http://localhost:3000/update-user-rating",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/update-user-rating",
         {
           username: username,
           movieTitle: movieInfo.title,
@@ -52,7 +52,7 @@ export const MovieProvider = ({ children }) => {
       const token = getToken();
 
       const response = await axios.put(
-        "http://localhost:3000/edit-movie-state",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/edit-movie-state",
         {
           username: username,
           action: action,
@@ -86,7 +86,7 @@ export const MovieProvider = ({ children }) => {
       const username = getUsername();
       const token = getToken();
       const response = await axios.put(
-        "http://localhost:3000/remove-movie",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/remove-movie",
         {
           username: username,
           movieName: movieInfo.title,

@@ -7,13 +7,13 @@ function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState("")
+  const [message, setMessage] = useState("");
   const nav = useNavigate();
 
   const registerUser = async (userData) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/register",
+        "https://google-hackathon-dbr4l55rs-aejgk.vercel.app/register",
         userData
       );
       console.log("Registration Successful", response.data);
@@ -47,19 +47,21 @@ function Register() {
       bio: "",
     };
     if (confirmPassword !== password) {
-      setMessage("Your password is not the same. Please try again")
-    }else {
+      setMessage("Your password is not the same. Please try again");
+    } else {
       registerUser(credentials);
     }
-   
   };
 
   return (
     <div className="auth-page">
       <h1 id="register-title">Register</h1>
       <form className="user-auth-form" onSubmit={handleSubmit}>
-
-      {message !== "" && <p style={{color: message.includes('') ? 'darkred' : 'green'}}>{message}</p>}
+        {message !== "" && (
+          <p style={{ color: message.includes("") ? "darkred" : "green" }}>
+            {message}
+          </p>
+        )}
 
         <label className="form-label" htmlFor="username-field">
           Username:
