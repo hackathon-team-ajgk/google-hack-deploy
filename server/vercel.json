@@ -6,5 +6,8 @@
       "src": "/api/(.*)",
       "dest": "/api"
     }
+  ],
+  "rewrites": [
+        {"source": "/api/(.*)", "destination": "/api"}
   ]
 }
