@@ -18,7 +18,7 @@ function YourList() {
       setIsLoading(true);
       const token = getToken();
       const response = await axios.get(
-        `${process.env.API_URL}/getRecommendations-list`,
+        `${process.env.REACT_APP_API_URL}/getRecommendations-list`,
         {
           headers: {
             authorization: token,
@@ -49,7 +49,7 @@ function YourList() {
         const token = getToken();
         const username = getUsername();
         const response = await axios.get(
-          `${process.env.API_URL}/getUserMovieData`,
+          `${process.env.REACT_APP_API_URL}/getUserMovieData`,
           {
             headers: {
               authorization: token,

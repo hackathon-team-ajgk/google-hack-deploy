@@ -15,7 +15,7 @@ function SearchMovie({ onSearch }) {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `${process.env.API_URL}/getMoviesFromSearch`,
+        `${process.env.REACT_APP_API_URL}/getMoviesFromSearch`,
         {
           params: { movie: searchedMovie },
         }

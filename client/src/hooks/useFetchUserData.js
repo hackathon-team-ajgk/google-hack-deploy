@@ -11,11 +11,15 @@ export function useFetchUserData() {
       const getUserInfo = async () => {
         try {
           const token = getToken();
-          const response = await axios.get(`${process.env.API_URL}/user`, {
-            headers: {
-              authorization: token,
-            },
-          });
+          const response = await axios.get(
+            `${process.env.REACT_APP_API_URL}/user`,
+            {
+              headers: {
+                authorization: token,
+              },
+            }
+          );
+          console.log(response.data);
           setUserData(response.data[0]);
         } catch (error) {
           if (error.response) {

@@ -23,11 +23,13 @@ function Home() {
     setHeroMovies(firstThreeMovies);
   }, [trendingMovies]);
 
+  console.log(process.env.REACT_APP_API_URL);
+
   useEffect(() => {
     const getTrendingMovies = async () => {
       try {
         const response = await axios.get(
-          `${process.env.API_URL}/getTrendingMovies`
+          `${process.env.REACT_APP_API_URL}/getTrendingMovies`
         );
         const movies = response.data.movie;
         storeTrendingMovies(movies);

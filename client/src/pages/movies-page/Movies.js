@@ -16,7 +16,7 @@ function Movies() {
     const getTrendingMovies = async () => {
       try {
         const response = await axios.get(
-          `${process.env.API_URL}/getTrendingMovies`
+          `${process.env.REACT_APP_API_URL}/getTrendingMovies`
         );
 
         const movies = response.data.movie;
@@ -45,7 +45,7 @@ function Movies() {
     const getPopularMovies = async () => {
       try {
         const response = await axios.get(
-          `${process.env.API_URL}/getPopularMovies`
+          `${process.env.REACT_APP_API_URL}/getPopularMovies`
         );
         const movies = response.data.movie;
         setPopularMovies(movies);

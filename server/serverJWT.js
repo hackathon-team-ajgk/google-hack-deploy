@@ -7,41 +7,21 @@ const app = express();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const connectToDatabase = require("./utils/db");
+const authenticateToken = require("./utils/auth");
 require("dotenv").config();
 app.use(express.json());
 
 // Enable CORS for all routes
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://localhost:3001");
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
 
-app.use("/", (req, res) => {
-  res.send("server is running,");
+app.get("/", (req, res) => {
+  res.json("hello world");
 });
-
-/**
- * Middleware to authenticate JWT token
- * @name authenticateToken
- * @param {object} req - Express request object
- * @param {object} res - Express response object
- * @param {function} next - Express next function
- * @returns {void}
- */
-function authenticateToken(req, res, next) {
-  const token = req.headers["authorization"];
-  // const token = authHeader && authHeader.split(" ")[1];
-  if (token == null) return res.status(401).send("No token");
-
-  jwt.verify(token, process.env.JWT_SECRET, (err, body) => {
-    if (err) return res.send("Unverified token");
-    req.user = body;
-    // console.log(req.user) // For testing only
-    next();
-  });
-}
 
 /**
  * Route to fetch specific user data.
@@ -50,10 +30,11 @@ function authenticateToken(req, res, next) {
  * @param {object} res - Express response object
  * @returns {object} - All the data about the signed-in user
  */
-app.get("/user", authenticateToken, async (req, res) => {
+app.get("/user", async (req, res) => {
   try {
     // Retrieve all users from the database
-    // console.log(req.user.username) // Should be name of whatever you signed in as
+    // console.log(userClaims.username) // Should be name of whatever you signed in as
+    const userClaims = authenticateToken(req);
 
     // Use the appropriate database and collection
     const db = await connectToDatabase();
@@ -61,7 +42,7 @@ app.get("/user", authenticateToken, async (req, res) => {
 
     const users = await usersCollection.find().toArray();
     const userData = users
-      .filter((user) => user.username === req.user.username)
+      .filter((user) => user.username === userClaims.username)
       .map(({ password, ...rest }) => rest); // Exclude the 'password' field
 
     res.json(userData);
@@ -99,14 +80,15 @@ app.get("/allUsers", async (req, res) => {
  * @param {object} res - Express response object
  * @returns {object} - The movie data associated with the user
  */
-app.get("/getUserMovieData", authenticateToken, async (req, res) => {
+app.get("/getUserMovieData", async (req, res) => {
   try {
+    const userClaims = authenticateToken(req);
     // Use the appropriate database and collection
     const db = await connectToDatabase();
     const usersCollection = db.collection("users");
     // Find the user directly using the username from the token
     const user = await usersCollection.findOne({
-      username: req.user.username,
+      username: userClaims.username,
     });
     // Check if the user was found
     if (user) {
@@ -269,11 +251,12 @@ app.post("/login", async (req, res) => {
  * @param {object} res - Express response object
  * @returns {void}
  */
-app.delete("/delete-account", authenticateToken, async (req, res) => {
+app.delete("/delete-account", async (req, res) => {
+  const userClaims = authenticateToken(req);
   // Use the appropriate database and collection
   const db = await connectToDatabase();
   const usersCollection = db.collection("users");
-  const user = req.user.username;
+  const user = userClaims.username;
   try {
     // Find the user in the database
     const userInDb = await usersCollection.findOne({
@@ -306,8 +289,9 @@ app.delete("/delete-account", authenticateToken, async (req, res) => {
  * @param {object} res - Express response object
  * @returns {void}
  */
-app.put("/edit-movie-state", authenticateToken, async (req, res) => {
+app.put("/edit-movie-state", async (req, res) => {
   try {
+    const userClaims = authenticateToken(req);
     // Use the appropriate database and collection
     const db = await connectToDatabase();
     const usersCollection = db.collection("users");
@@ -387,8 +371,9 @@ app.put("/edit-movie-state", authenticateToken, async (req, res) => {
  * @param {object} res - Express response object
  * @returns {void}
  */
-app.put("/changeBio", authenticateToken, async (req, res) => {
+app.put("/changeBio", async (req, res) => {
   try {
+    const userClaims = authenticateToken(req);
     // Use the appropriate database and collection
     const db = await connectToDatabase();
     const usersCollection = db.collection("users");
@@ -414,8 +399,9 @@ app.put("/changeBio", authenticateToken, async (req, res) => {
  * @param {object} res - Express response object
  * @returns {void}
  */
-app.put("/remove-movie", authenticateToken, async (req, res) => {
+app.put("/remove-movie", async (req, res) => {
   try {
+    const userClaims = authenticateToken(req);
     // Use the appropriate database and collection
     const db = await connectToDatabase();
     const usersCollection = db.collection("users");
@@ -490,8 +476,9 @@ app.put("/remove-movie", authenticateToken, async (req, res) => {
  * @param {object} res - Express response object
  * @returns {void}
  */
-app.put("/update-user-rating", authenticateToken, async (req, res) => {
+app.put("/update-user-rating", async (req, res) => {
   try {
+    const userClaims = authenticateToken(req);
     // Use the appropriate database and collection
     const db = await connectToDatabase();
     const usersCollection = db.collection("users");
@@ -582,14 +569,15 @@ app.get("/getRecommendations-genre", async (req, res) => {
  * @param {object} res - Express response object
  * @returns {void}
  */
-app.get("/getRecommendations-list", authenticateToken, async (req, res) => {
+app.get("/getRecommendations-list", async (req, res) => {
   try {
+    const userClaims = authenticateToken(req);
     // Use the appropriate database and collection
     const db = await connectToDatabase();
     const usersCollection = db.collection("users");
     // Find the user in the database
     const userInDb = await usersCollection.findOne({
-      username: req.user.username,
+      username: userClaims.username,
     });
     // Check if the user exists
     if (!userInDb) {

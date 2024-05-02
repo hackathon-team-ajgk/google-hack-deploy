@@ -14,7 +14,7 @@ export const MovieProvider = ({ children }) => {
       const token = getToken();
       const username = getUsername();
       const response = await axios.put(
-        `${process.env.API_URL}/update-user-rating`,
+        `${process.env.REACT_APP_API_URL}/update-user-rating`,
         {
           username: username,
           movieTitle: movieInfo.title,
@@ -52,7 +52,7 @@ export const MovieProvider = ({ children }) => {
       const token = getToken();
 
       const response = await axios.put(
-        `${process.env.API_URL}/edit-movie-state`,
+        `${process.env.REACT_APP_API_URL}/edit-movie-state`,
         {
           username: username,
           action: action,
@@ -86,7 +86,7 @@ export const MovieProvider = ({ children }) => {
       const username = getUsername();
       const token = getToken();
       const response = await axios.put(
-        `${process.env.API_URL}/remove-movie`,
+        `${process.env.REACT_APP_API_URL}/remove-movie`,
         {
           username: username,
           movieName: movieInfo.title,

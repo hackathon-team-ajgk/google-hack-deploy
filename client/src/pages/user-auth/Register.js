@@ -13,7 +13,7 @@ function Register() {
   const registerUser = async (userData) => {
     try {
       const response = await axios.post(
-        `${process.env.API_URL}/register`,
+        `${process.env.REACT_APP_API_URL}/register`,
         userData
       );
       console.log("Registration Successful", response.data);

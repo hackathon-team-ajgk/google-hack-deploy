@@ -28,7 +28,7 @@ function UserProfile() {
     try {
       const token = getToken();
       const response = await axios.put(
-        `${process.env.API_URL}/changeBio`,
+        `${process.env.REACT_APP_API_URL}/changeBio`,
         userDetails,
         {
           headers: {
@@ -66,7 +66,7 @@ function UserProfile() {
     try {
       const token = getToken();
       const response = await axios.delete(
-        `${process.env.API_URL}/delete-account`,
+        `${process.env.REACT_APP_API_URL}/delete-account`,
         {
           headers: {
             authorization: token,
