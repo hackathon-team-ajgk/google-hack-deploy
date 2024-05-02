@@ -3,7 +3,7 @@ name: Development Workflow
 on: 
   push:
     branches:
-      - main
+      - serverDev
   workflow_dispatch:
 
 jobs:
