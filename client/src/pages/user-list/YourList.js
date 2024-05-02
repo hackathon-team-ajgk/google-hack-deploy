@@ -1,9 +1,9 @@
 import "./YourList.css";
-import MovieSlider from "../../components/MovieSlider";
+import MovieSlider from "../../components/MovieSlider.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useAuth } from "../../contexts/AuthContext";
-import CircularProgress from "@mui/material/CircularProgress";
+import { useAuth } from "../../contexts/AuthContext.js";
+import CircularProgress from "@mui/material/CircularProgress.js";
 
 function YourList() {
   const { getToken, getUsername } = useAuth();

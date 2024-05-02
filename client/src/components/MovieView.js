@@ -1,9 +1,9 @@
 import CloseFullscreenIcon from "@mui/icons-material/CloseFullscreen";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext.js";
 import { useEffect, useState } from "react";
 import Rating from "@mui/material/Rating";
-import { useMovieContext } from "../contexts/MovieContext";
-import { useFetchUserData } from "../hooks/useFetchUserData";
+import { useMovieContext } from "../contexts/MovieContext.js";
+import { useFetchUserData } from "../hooks/useFetchUserData.js";
 import CircularProgress from "@mui/material/CircularProgress";
 
 function MovieView({ movieInfo, toggleOverlay }) {

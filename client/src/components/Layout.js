@@ -1,12 +1,12 @@
 import { useNavigate, Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.js";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import XIcon from "@mui/icons-material/X";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext.js";
 import { useState } from "react";
-import Dropdown from "./Dropdown";
+import Dropdown from "./Dropdown.js";
 
 function Layout() {
   const navigate = useNavigate();

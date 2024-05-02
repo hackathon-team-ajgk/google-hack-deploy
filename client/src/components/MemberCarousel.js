@@ -1,5 +1,5 @@
-import { teamInfo } from "./MemberInfo";
-import ProfileCard from "./ProfileCard";
+import { teamInfo } from "./MemberInfo.js";
+import ProfileCard from "./ProfileCard.js";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

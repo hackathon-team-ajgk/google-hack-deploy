@@ -1,10 +1,10 @@
 import "./Movies.css";
-import MovieSlider from "../../components/MovieSlider";
+import MovieSlider from "../../components/MovieSlider.js";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import SearchMovie from "../../components/SearchMovie";
-import MovieRecs from "../../components/MovieRecs";
-import { Reveal } from "../../components/Reveal";
+import SearchMovie from "../../components/SearchMovie.js";
+import MovieRecs from "../../components/MovieRecs.js";
+import { Reveal } from "../../components/Reveal.js";
 
 function Movies() {
   const [trendingMovies, setTrendingMovies] = useState([]);

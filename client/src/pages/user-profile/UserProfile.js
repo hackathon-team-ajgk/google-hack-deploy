@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "./UserProfile.css";
 import axios from "axios";
-import { useAuth } from "../../contexts/AuthContext";
-import MovieSlider from "../../components/MovieSlider";
+import { useAuth } from "../../contexts/AuthContext.js";
+import MovieSlider from "../../components/MovieSlider.js";
 import { useNavigate } from "react-router-dom";
-import { useFetchUserData } from "../../hooks/useFetchUserData";
-import { Reveal } from "../../components/Reveal";
+import { useFetchUserData } from "../../hooks/useFetchUserData.js";
+import { Reveal } from "../../components/Reveal.js";
 
 function UserProfile() {
   const navigate = useNavigate();

@@ -2,16 +2,16 @@ import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
-import Home from "./pages/home-page/Home";
-import Login from "./pages/user-auth/Login";
-import Register from "./pages/user-auth/Register";
-import NoPage from "./components/NoPage";
-import Layout from "./components/Layout";
-import YourList from "./pages/user-list/YourList";
-import Movies from "./pages/movies-page/Movies";
-import About from "./pages/about-page/About";
-import { AuthProvider } from "./contexts/AuthContext";
-import UserProfile from "./pages/user-profile/UserProfile";
+import Home from "./pages/home-page/Home.js";
+import Login from "./pages/user-auth/Login.js";
+import Register from "./pages/user-auth/Register.js";
+import NoPage from "./components/NoPage.js";
+import Layout from "./components/Layout.js";
+import YourList from "./pages/user-list/YourList.js";
+import Movies from "./pages/movies-page/Movies.js";
+import About from "./pages/about-page/About.js";
+import { AuthProvider } from "./contexts/AuthContext.js";
+import UserProfile from "./pages/user-profile/UserProfile.js";
 
 function App() {
   return (

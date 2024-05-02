@@ -2,10 +2,10 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import axios from "axios";
-import HeroMovies from "../../components/HeroMovies";
-import MovieSlider from "../../components/MovieSlider";
-import { useAuth } from "../../contexts/AuthContext";
-import { Reveal } from "../../components/Reveal";
+import HeroMovies from "../../components/HeroMovies.js";
+import MovieSlider from "../../components/MovieSlider.js";
+import { useAuth } from "../../contexts/AuthContext.js";
+import { Reveal } from "../../components/Reveal.js";
 
 function Home() {
   const { getToken } = useAuth();

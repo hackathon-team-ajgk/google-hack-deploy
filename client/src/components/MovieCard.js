@@ -1,7 +1,7 @@
 import "../pages/home-page/Home.css";
 import { useState } from "react";
-import MovieView from "./MovieView";
-import { MovieProvider } from "../contexts/MovieContext";
+import MovieView from "./MovieView.js";
+import { MovieProvider } from "../contexts/MovieContext.js";
 
 function MovieCard({ movie }) {
   const [overlayOn, setOverlayOn] = useState(false);

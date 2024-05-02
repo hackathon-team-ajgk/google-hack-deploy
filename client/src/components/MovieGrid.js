@@ -1,4 +1,4 @@
-import MovieCard from "./MovieCard";
+import MovieCard from "./MovieCard.js";
 import "../pages/movies-page/Movies.css";
 
 function MovieGrid({ searchResult }) {

@@ -1,8 +1,8 @@
 import "./About.css";
 import "../../App.css";
-import Contact from "../../components/Contact";
-import MemberCarousel from "../../components/MemberCarousel";
-import { Reveal } from "../../components/Reveal";
+import Contact from "../../components/Contact.js";
+import MemberCarousel from "../../components/MemberCarousel.js";
+import { Reveal } from "../../components/Reveal.js";
 
 function About() {
   return (
