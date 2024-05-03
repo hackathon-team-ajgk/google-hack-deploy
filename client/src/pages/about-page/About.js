@@ -7,13 +7,11 @@ import { Reveal } from "../../components/Reveal";
 function About() {
   return (
     <>
-      <div className="about-container">
+      <div className="sub-page">
         <Reveal>
-          <section className="about-heading-container">
-            <h1 id="about-heading" className="page-heading">
-              About Us
-            </h1>
-          </section>
+          <h1 id="about-heading" className="page-heading">
+            About Us
+          </h1>
         </Reveal>
         <section className="about-section">
           <div className="about-sub-container">
@@ -35,7 +33,7 @@ function About() {
         </section>
         <section className="about-section">
           <div className="about-sub-container">
-            <Reveal>
+            <Reveal width="100%">
               <h2 className="page-heading">Our Features</h2>
               <ul className="features">
                 <li className="feature">

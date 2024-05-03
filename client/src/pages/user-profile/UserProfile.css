@@ -135,10 +135,13 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-height: 880px;
+    min-height: 1000px;
   }
   #user-details {
     border-right: none;
     border-bottom: 1px solid #3c3c3c;
   }
+}
+
+@media (max-width: 475px) {
 }

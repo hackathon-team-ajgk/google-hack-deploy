@@ -78,10 +78,10 @@ function Movies() {
 
   return (
     <div className="sub-page">
-      <Reveal>
+      <Reveal width="100%">
         <div className="search-recs-container">
-          <SearchMovie onSearch={handleSearch} />
           <MovieRecs onChange={handleRecommendations} />
+          <SearchMovie onSearch={handleSearch} />
         </div>
       </Reveal>
       <Reveal>

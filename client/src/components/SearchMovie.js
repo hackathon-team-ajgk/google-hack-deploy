@@ -42,30 +42,25 @@ function SearchMovie({ onSearch }) {
   return (
     <>
       <section id="search-movie-container" className="section-container">
-        <div id="search-bar-container">
-          <form id="search-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Search Movie Here"
-              onChange={(e) => {
-                setSearchedMovie(e.target.value);
-              }}
-            />
+        <form id="search-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search Movie Here"
+            onChange={(e) => {
+              setSearchedMovie(e.target.value);
+            }}
+          />
 
-            {isLoading ? (
-              <CircularProgress color="inherit" />
-            ) : (
-              <button id="search-submit-btn" className="button" type="submit">
-                Search
-              </button>
-            )}
-          </form>
-        </div>
+          {isLoading ? (
+            <CircularProgress color="inherit" />
+          ) : (
+            <button id="search-submit-btn" className="button" type="submit">
+              Search
+            </button>
+          )}
+        </form>
       </section>
-      {/* {moviesFromSearch.length > 0 && (
-        <MovieSlider genre="Search Results" movies={moviesFromSearch} />
-      )} */}
     </>
   );
 }

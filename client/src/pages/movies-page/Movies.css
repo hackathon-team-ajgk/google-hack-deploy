@@ -13,6 +13,7 @@
   min-height: 90px;
   max-width: 400px;
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -20,24 +21,24 @@
 #search-bar-container {
   padding: 10px;
   align-self: center;
+  max-width: 90%;
 }
 
 #search-form {
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #search-input {
   height: 30px;
-  max-width: 250px;
   border-radius: 5px;
   border: none;
   font-size: 20px;
   background-color: #4c4c4c;
   color: #ffffff;
   padding: 10px;
-  margin-right: 20px;
   transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
@@ -137,7 +138,10 @@
 @media (max-width: 768px) {
   #search-input {
     font-size: 20px;
-    min-width: 490px;
+    min-width: 80%;
+  }
+  #search-form {
+    min-width: 100%;
   }
   .search-recs-container {
     max-width: 640px;
@@ -159,10 +163,41 @@
   .search-recs-container {
     max-width: 475px;
   }
+  #search-bar-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  #search-submit-btn {
+    display: none;
+  }
   #ai-suggestions-by-genre {
     min-width: 100%;
   }
+  #search-movie-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .search-recs-container {
+    max-width: 80vw;
+    margin-left: 40px;
+  }
+  #search-form {
+    max-width: 100%;
+  }
   #search-input {
-    min-width: 330px;
+    max-width: 50px;
+  }
+  .genre-recs-container {
+    justify-content: center;
+    min-width: 100%;
+  }
+  .genres-container {
+    font-size: 16px;
+    max-width: 100px;
+  }
+  #get-recs-btn {
+    font-size: 14px;
   }
 }

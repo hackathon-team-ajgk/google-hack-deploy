@@ -24,13 +24,11 @@
   font-weight: bold;
 }
 
-#password-field {
-  margin-bottom: 20px;
-}
-
 .form-input {
   height: 25px;
   font-size: large;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .submit-button {
@@ -39,6 +37,12 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.submit-button:hover {
+  box-shadow: 2px 2px 4px black;
 }
 
 .user-auth-button-group {

@@ -15,3 +15,9 @@
   text-align: center;
   pointer-events: none;
 }
+
+@media (max-width: 475px) {
+  #generate-recs-list {
+    max-width: 300px;
+  }
+}

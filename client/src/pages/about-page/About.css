@@ -11,27 +11,9 @@
   position: relative;
 }
 
-.about-heading-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../../assets/images/Arrow.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(85%);
-  z-index: -1;
-}
-
 #about-heading {
-  position: absolute;
-  z-index: 1;
-  margin: 0;
-  top: 300px;
-  left: 800px;
+  margin-top: 20px;
+  margin-bottom: 0;
   font-size: 100px;
   pointer-events: none;
 }
@@ -259,9 +241,6 @@ a:visited {
 }
 
 @media (max-width: 1848px) {
-  #about-heading {
-    left: 300px;
-  }
   .about-sub-container {
     max-width: 1552px;
   }
@@ -277,9 +256,6 @@ a:visited {
 }
 
 @media (max-width: 1552px) {
-  #about-heading {
-    left: 300px;
-  }
   .page-heading {
     font-size: 50px;
   }
@@ -307,9 +283,6 @@ a:visited {
 }
 
 @media (max-width: 1024px) {
-  #about-heading {
-    left: 400px;
-  }
   .page-heading {
     font-size: 35px;
   }
@@ -332,9 +305,6 @@ a:visited {
 }
 
 @media (max-width: 900px) {
-  #about-heading {
-    left: 550px;
-  }
   .page-heading {
     font-size: 25px;
   }
@@ -383,12 +353,47 @@ a:visited {
     min-height: 52px;
   }
   #contact-textarea {
-    max-width: 262px;
+    max-width: 245px;
   }
   #address-input::placeholder {
     padding-left: 20px;
   }
   #carousel-section {
     max-width: 400px;
+  }
+}
+
+@media (max-width: 475px) {
+  .about-sub-container {
+    max-width: 475px;
+  }
+  .about-text {
+    font-size: 14px;
+  }
+  #about-heading {
+    font-size: 40px;
+  }
+  .about-section {
+    max-width: 80vw;
+  }
+  .about-sub-container {
+    min-width: 100%;
+  }
+  .features {
+    max-width: 100%;
+  }
+  .feature {
+    font-size: 14px;
+    padding: 0;
+  }
+  #carousel-section {
+    min-width: 100%;
+  }
+  #contact-section {
+    max-width: 80vw;
+    min-height: fit-content;
+  }
+  .contact-us {
+    max-width: 100%;
   }
 }

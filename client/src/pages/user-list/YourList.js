@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../contexts/AuthContext";
 import CircularProgress from "@mui/material/CircularProgress";
+import { Reveal } from "../../components/Reveal";
 
 function YourList() {
   const { getToken, getUsername } = useAuth();
@@ -82,19 +83,20 @@ function YourList() {
     <div className="sub-page">
       {getToken() ? (
         <>
-          <MovieSlider
-            genre="Watched"
-            movies={watched}
-            isList={true}
-            isEmpty={watched.length === 0}
-          />
-          <MovieSlider
-            genre="Watch Later"
-            movies={watchLater}
-            isList={true}
-            isEmpty={watchLater.length === 0}
-          />
-
+          <Reveal>
+            <MovieSlider
+              genre="Watched"
+              movies={watched}
+              isList={true}
+              isEmpty={watched.length === 0}
+            />
+            <MovieSlider
+              genre="Watch Later"
+              movies={watchLater}
+              isList={true}
+              isEmpty={watchLater.length === 0}
+            />
+          </Reveal>
           {suggestionsByList.length > 0 && (
             <MovieSlider
               genre="Recommendations From List"
@@ -104,13 +106,15 @@ function YourList() {
           {isLoading ? (
             <CircularProgress color="inherit" />
           ) : (
-            <button
-              id="generate-recs-list"
-              className="button"
-              onClick={getUserRecommendationsByList}
-            >
-              Get Recommendations
-            </button>
+            <Reveal width="fit-content">
+              <button
+                id="generate-recs-list"
+                className="button"
+                onClick={getUserRecommendationsByList}
+              >
+                Get Recommendations
+              </button>
+            </Reveal>
           )}
         </>
       ) : (

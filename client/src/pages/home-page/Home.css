@@ -135,9 +135,11 @@
   height: 325px;
   width: 100%;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   max-width: 1552px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
 }
 
 .progress-div {
@@ -500,7 +502,7 @@
   .movie-slider-container {
     max-width: 475px;
   }
-  .listed-movie-card {
+  .hero-images {
     display: none;
   }
   #hero-section {
@@ -525,12 +527,38 @@
 
 @media (max-width: 475px) {
   .section-container {
-    max-width: 100%;
+    max-width: 80vw;
   }
-  .sub-page {
-    max-width: 100%;
+  .hero-section-text {
+    font-size: 16px;
+  }
+  #hero-section {
+    min-height: fit-content;
+  }
+  #hero-button {
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
   }
   .movie-slider-container {
-    max-width: 100%;
+    max-width: 80vw;
+  }
+  .movie-slider {
+    min-width: 100%;
+  }
+  .home-text {
+    font-size: 16px;
+  }
+  #ai-suggestions {
+    min-height: fit-content;
+  }
+  #ai-sugg-main-text {
+    font-size: 20px;
+  }
+  #ai-sugg-text-container {
+    max-width: 90%;
+  }
+  #ai-sugg-secondary-text {
+    font-size: 16px;
   }
 }

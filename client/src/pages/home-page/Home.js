@@ -23,8 +23,6 @@ function Home() {
     setHeroMovies(firstThreeMovies);
   }, [trendingMovies]);
 
-  console.log(process.env.REACT_APP_API_URL);
-
   useEffect(() => {
     const getTrendingMovies = async () => {
       try {
@@ -88,7 +86,7 @@ function Home() {
       <Reveal>
         <MovieSlider genre="Trending" movies={trendingMovies} />
       </Reveal>
-      <Reveal>
+      <Reveal width="100%">
         <section id="ai-suggestions" className="section-container">
           <div id="ai-sugg-text-container">
             <strong id="ai-sugg-main-text" className="home-text">
@@ -110,7 +108,7 @@ function Home() {
           </div>
         </section>
       </Reveal>
-      <Reveal>
+      <Reveal width="100%">
         {!getToken() && (
           <section id="cta" className="section-container">
             <div id="cta-div">
