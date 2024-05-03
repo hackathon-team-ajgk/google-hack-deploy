@@ -16,12 +16,17 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  background-color: rgba(148, 150, 225, 0.05);
 }
 
 #search-bar-container {
   padding: 10px;
   align-self: center;
   max-width: 90%;
+}
+
+#ai-suggestions-by-genre {
+  background-color: rgba(148, 150, 225, 0.05); /*coloring of genres bar in Movies*/
 }
 
 #search-form {
@@ -36,15 +41,20 @@
   border-radius: 5px;
   border: none;
   font-size: 20px;
-  background-color: #4c4c4c;
+  background-color: rgba(148, 150, 225, 0.7);
   color: #ffffff;
   padding: 10px;
   transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
+#search-input::placeholder {
+  color: rgb(237, 238, 247);
+}
+
 #search-input:hover {
   filter: brightness(90%);
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 5px black;
+  background-color: rgba(71, 74, 118,0.9);
 }
 
 #search-submit-btn {
@@ -83,8 +93,8 @@
 .genres-container {
   height: 40px;
   font-size: 20px;
-  color: white;
-  background-color: #4c4c4c;
+  color: rgb(237, 238, 247);
+  background-color: rgba(148, 150, 225, 0.7);
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 8px black;
@@ -94,6 +104,7 @@
 
 .genres-container:hover {
   box-shadow: 4px 4px 12px black;
+  background-color: rgba(71, 74, 118,0.9);
 }
 
 #get-recs-btn {

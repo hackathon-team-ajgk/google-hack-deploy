@@ -5,13 +5,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: rgb(237, 238, 247);
 }
 
 .user-auth-form {
   width: 400px;
   height: fit-content;
-  background-color: #3c3c3c;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(48, 54, 103, 0.8),
+    rgba(30, 31, 61, 0.8)
+  );
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -24,11 +28,76 @@
   font-weight: bold;
 }
 
+#username-field {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(69, 73, 125),
+    rgb(64, 75, 197)
+  );
+  border: none;
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px black;
+  color: rgb(237, 238, 247);
+}
+
+#username-field:hover,
+#username-field:focus {
+  background-image: linear-gradient(to right, rgb(44, 44, 44), rgb(66, 66, 66));
+}
+
+#password-field {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(69, 73, 125),
+    rgb(64, 75, 197)
+  );
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 8px black;
+  border-radius: 3px;
+  border: none;
+  color: rgb(237, 238, 247);
+}
+
+#password-field:hover,
+#password-field:focus {
+  background-image: linear-gradient(to right, rgb(44, 44, 44), rgb(66, 66, 66));
+}
+
+#re-password-field {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(69, 73, 125),
+    rgb(64, 75, 197)
+  );
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 8px black;
+  border-radius: 3px;
+  border: none;
+  color: rgb(237, 238, 247);
+}
+
+#re-password-field:hover,
+#re-password-field:focus {
+  background-image: linear-gradient(to right, rgb(44, 44, 44), rgb(66, 66, 66));
+}
+
 .form-input {
   height: 25px;
   font-size: large;
   padding: 5px;
   border-radius: 5px;
+}
+
+.form-input::placeholder {
+  padding-left: 5px;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.form-input::placeholder {
+  padding-left: 5px;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.7);
 }
 
 .submit-button {
@@ -37,12 +106,32 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  margin-top: 5px;
+  color: rgb(237, 238, 247);
+  background-color: rgb(10, 16, 101);
+  border: none;
+  box-shadow: 4px 4px 8px black;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  box-shadow: 2px 2px 4px black;
+  background-image: linear-gradient(to bottom right, #000033, #000019);
+  animation: pulse-glow 1.4s infinite;
+}
+
+/*Pulse-Glow animation for Submit button*/
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(64, 75, 197, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+  }
 }
 
 .user-auth-button-group {
@@ -52,6 +141,6 @@
 }
 
 .link {
-  color: #ffffff;
+  color: rgb(237, 238, 247);
   font-size: large;
 }

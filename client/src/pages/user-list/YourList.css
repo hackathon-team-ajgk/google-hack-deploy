@@ -1,5 +1,5 @@
 #generate-recs-list {
-  background-color: #4c4c4c;
+  background-color: rgba(29, 35, 144, 1);
   box-shadow: 2px 2px 4px black;
   font-size: 20px;
   width: 350px;
@@ -8,7 +8,7 @@
 
 #generate-recs-list:hover {
   box-shadow: 4px 4px 8px black;
-  filter: brightness(80%);
+  filter: brightness(60%);
 }
 
 #guest-msg {
