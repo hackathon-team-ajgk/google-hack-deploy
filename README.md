@@ -43,9 +43,9 @@ Contributing
 
 Interested in contributing? Fantastic! Here are some ways you can help:  
 
-	Bug Reports: Report issues and suggest improvements.  
+Bug Reports: Report issues and suggest improvements.  
 
-	Feature Requests: Propose ideas for new features 
+Feature Requests: Propose ideas for new features 
 
 	 
 
