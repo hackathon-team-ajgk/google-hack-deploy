@@ -39,7 +39,7 @@ Your List: Provides a personalized watchlist where users can save and manage the
 
 About Page: Offers insights into the application's purpose, its features, and the minds behind its development  
 
-Contributing 
+## Contributing 
 
 Interested in contributing? Fantastic! Here are some ways you can help:  
 
