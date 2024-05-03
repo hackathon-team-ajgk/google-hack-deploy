@@ -86,7 +86,7 @@ function Home() {
       <Reveal>
         <MovieSlider genre="Trending" movies={trendingMovies} />
       </Reveal>
-      <Reveal width="100%">
+      <Reveal width="fit-content">
         <section id="ai-suggestions" className="section-container">
           <div id="ai-sugg-text-container">
             <strong id="ai-sugg-main-text" className="home-text">
@@ -108,8 +108,8 @@ function Home() {
           </div>
         </section>
       </Reveal>
-      <Reveal width="100%">
-        {!getToken() && (
+      {!getToken() && (
+        <Reveal width="fit-content">
           <section id="cta" className="section-container">
             <div id="cta-div">
               <strong id="cta-title" className="cta-text">
@@ -130,8 +130,8 @@ function Home() {
               </button>
             </div>
           </section>
-        )}
-      </Reveal>
+        </Reveal>
+      )}
     </div>
   );
 }

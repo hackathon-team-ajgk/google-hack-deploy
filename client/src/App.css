@@ -227,7 +227,7 @@ main {
 
 footer {
   margin-top: 40px;
-  height: 200px;
+  height: 150px;
   width: 100%;
   background-color: #1b1b1b;
   display: flex;
@@ -244,8 +244,17 @@ footer {
 
 #footer-socials {
   margin-top: 40px;
+}
+
+.link-tree {
   display: flex;
-  gap: 1rem;
+  gap: 0.25rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: white;
 }
 
 #footer-copyright {
@@ -375,5 +384,8 @@ footer {
   }
   .navbar {
     max-width: 100%;
+  }
+  #list-link {
+    display: none;
   }
 }

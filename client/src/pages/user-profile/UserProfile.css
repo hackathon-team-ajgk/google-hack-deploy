@@ -60,7 +60,7 @@
   font-size: large;
   background-color: #5c5c5c;
   width: 225px;
-  max-height: 200px;
+  height: 102px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 10px black;
@@ -141,7 +141,4 @@ textarea::placeholder {
     border-right: none;
     border-bottom: 1px solid #3c3c3c;
   }
-}
-
-@media (max-width: 475px) {
 }

@@ -117,7 +117,7 @@ function UserProfile() {
               {!isEditingBio ? (
                 <>
                   <p id="user-bio" className="profile-field">
-                    {bio}
+                    {bio !== "" ? bio : "Bio is empty.."}
                   </p>
                   <button
                     id="edit-bio-btn"

@@ -371,7 +371,8 @@ a:visited {
     font-size: 14px;
   }
   #about-heading {
-    font-size: 40px;
+    font-size: 50px;
+    margin-bottom: 20px;
   }
   .about-section {
     max-width: 80vw;
