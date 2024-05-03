@@ -1,6 +1,7 @@
 #hero-section {
   height: 500px;
   margin-bottom: 20px;
+  min-width: 100%;
   position: relative;
   background: none;
   position: relative;
@@ -14,7 +15,12 @@
   margin: 40px 0;
   box-shadow: 4px 4px 20px 2px black;
   border-radius: 10px;
-  background-color: #202020;
+  background-color: rgba(
+    148,
+    150,
+    225,
+    0.05
+  ); /*"cant think fo what to waTCH NEXT?*/
 }
 
 #hero-section::before {
@@ -40,17 +46,24 @@
 
 #bold-hero-text {
   font-weight: bold;
+  font-size: 40px;
 }
 
 .hero-section-text {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 50px;
   pointer-events: none;
+  text-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 1);
 }
 
 .listed-movie-card {
   position: absolute;
-  background-color: #202020;
+  background-color: rgba(
+    30,
+    31,
+    61,
+    1
+  ); /* The highlight for colo under hero cards*/
   box-shadow: 4px 4px 10px 2px black;
   width: fit-content;
   border-radius: 5px;
@@ -58,6 +71,20 @@
   flex-direction: column;
   align-items: center;
   height: 310px;
+  color: black;
+  text-shadow: none;
+}
+
+#dune {
+  background-color: rgb(148, 150, 225);
+}
+
+#kfp {
+  background-color: rgba(86, 87, 139, 1);
+}
+
+#immaculate {
+  background-color: rgba(30, 31, 62, 1);
 }
 
 .hero-images {
@@ -95,18 +122,29 @@
 }
 
 .home-button {
-  font-size: 40px;
-  width: 400px;
-  height: 100px;
+  font-size: 25px;
+  width: 250px;
+  height: 60px;
+  margin-top: 30px;
   border-radius: 10px;
+  box-shadow: 6px 6px 20px 6px black;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  background-color: rgba(
+    29,
+    35,
+    144,
+    1
+  ); /*This is the "YOUR MOVIE LIST" button in Home*/
+  color: white;
 }
 
 .home-button:hover {
-  filter: brightness(60%);
-  box-shadow: 6px 6px 20px 6px #0b0b0b;
+  filter: brightness(90%);
+  background-color: rgba(29, 35, 144, 1);
+  box-shadow: 6px 6px 20px 6px rgba(30, 31, 61, 1);
+  transform: translateY(-5px);
 }
 
 .movie-label {
@@ -123,7 +161,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #202020;
+  background-color: rgba(148, 150, 225, 0.05); /* gabe checkpoint*/
   margin: 40px 0;
   box-shadow: 4px 4px 20px 2px black;
   border-radius: 10px;
@@ -135,9 +173,11 @@
   height: 325px;
   width: 100%;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   max-width: 1552px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
 }
 
 .progress-div {
@@ -170,7 +210,7 @@
 
 .movie-card:hover {
   box-shadow: 6px 6px 20px 6px #0b0b0b;
-  background-color: #3c3c3c;
+  background-color: rgba(148, 150, 225, 0.2);
 }
 
 .movie-title {
@@ -235,7 +275,7 @@
   width: 850px;
   border-radius: 10px;
   padding: 20px;
-  background-color: #2c2c2c;
+  background-color: rgba(41, 41, 48, 1); /*Overlay when a movie is clicked?*/
   box-shadow: 4px 4px 30px 2px black;
 }
 
@@ -500,7 +540,7 @@
   .movie-slider-container {
     max-width: 475px;
   }
-  .listed-movie-card {
+  .hero-images {
     display: none;
   }
   #hero-section {
@@ -525,12 +565,45 @@
 
 @media (max-width: 475px) {
   .section-container {
-    max-width: 100%;
+    max-width: 80vw;
   }
-  .sub-page {
-    max-width: 100%;
+  .hero-section-text {
+    font-size: 16px;
+  }
+  #bold-hero-text {
+    font-size: 24px;
+  }
+  #hero-section {
+    min-height: fit-content;
+  }
+  #hero-button {
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+    margin-top: 0;
   }
   .movie-slider-container {
-    max-width: 100%;
+    max-width: 80vw;
+  }
+  .movie-slider {
+    min-width: 100%;
+  }
+  .home-text {
+    font-size: 16px;
+  }
+  #ai-suggestions {
+    min-height: fit-content;
+  }
+  #ai-sugg-main-text {
+    font-size: 20px;
+  }
+  #ai-sugg-text-container {
+    max-width: 90%;
+  }
+  #ai-sugg-secondary-text {
+    font-size: 16px;
+  }
+  .reveal {
+    max-width: fit-content;
   }
 }

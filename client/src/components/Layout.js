@@ -1,12 +1,11 @@
 import { useNavigate, Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import XIcon from "@mui/icons-material/X";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { useAuth } from "../contexts/AuthContext";
 import { useState } from "react";
 import Dropdown from "./Dropdown";
+import { Toaster } from "sonner";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Layout() {
   const navigate = useNavigate();
@@ -34,6 +33,7 @@ function Layout() {
 
   return (
     <div className="app">
+      <Toaster position="top-center" />
       <div id="header-container" className="section-container">
         <div className="sub-header-container">
           <h1
@@ -52,7 +52,10 @@ function Layout() {
                 className="button"
                 onClick={toggleDropdown}
               >
-                {username}
+                <span className="account-icon">
+                  <AccountCircleIcon />
+                </span>
+                <span className="account-name">{username}</span>
               </button>
               {isDropdownOpen && (
                 <Dropdown toggle={toggleDropdown} logout={logoutUser} />
@@ -71,21 +74,20 @@ function Layout() {
       </main>
       <footer>
         <div id="footer-socials" className="footer-container">
-          <span className="social-icon">
-            <InstagramIcon fontSize="large" />
-          </span>
-          <span className="social-icon">
-            <FacebookIcon fontSize="large" />
-          </span>
-          <span className="social-icon">
-            <XIcon fontSize="large" />
-          </span>
-          <span className="social-icon">
-            <GitHubIcon fontSize="large" />
-          </span>
+          <a
+            className="link-tree"
+            target="_blank"
+            rel="noreferrer"
+            href="https://linktr.ee/MyMovieListDevs"
+          >
+            <span className="link-tree-icon">
+              <OpenInNewIcon fontSize="small" />
+            </span>
+            Linktree
+          </a>
         </div>
         <div id="footer-navbar" className="footer-container">
-          <Navbar />
+          <Navbar display="flex" />
         </div>
         <div id="footer-copyright" className="footer-container">
           <p id="footer-title">

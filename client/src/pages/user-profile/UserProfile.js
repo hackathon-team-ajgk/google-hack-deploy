@@ -6,6 +6,7 @@ import MovieSlider from "../../components/MovieSlider";
 import { useNavigate } from "react-router-dom";
 import { useFetchUserData } from "../../hooks/useFetchUserData";
 import { Reveal } from "../../components/Reveal";
+import { toast } from "sonner";
 
 function UserProfile() {
   const navigate = useNavigate();
@@ -37,7 +38,9 @@ function UserProfile() {
         }
       );
       console.log(response.data);
+      toast.success("Bio changed successfully.");
     } catch (error) {
+      toast.error("Bio failed to change, please try again.");
       if (error.response) {
         // The server responded with a status code that falls out of the range of 2xx
         console.error("Post Error:", error.response.data);
@@ -114,7 +117,7 @@ function UserProfile() {
               {!isEditingBio ? (
                 <>
                   <p id="user-bio" className="profile-field">
-                    {bio}
+                    {bio !== "" ? bio : "Bio is empty.."}
                   </p>
                   <button
                     id="edit-bio-btn"

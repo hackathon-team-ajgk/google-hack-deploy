@@ -1,6 +1,7 @@
 import React, { createContext, useContext } from "react";
 import axios from "axios";
 import { useAuth } from "./AuthContext";
+import { toast } from "sonner";
 
 // Create the context with a default undefined value
 const MovieContext = createContext(undefined);
@@ -27,21 +28,24 @@ export const MovieProvider = ({ children }) => {
         }
       );
       console.log(response.data);
+      toast.success("Rating was successfully updated.");
     } catch (error) {
       if (error.response) {
         // The server responded with a status code that falls out of the range of 2xx
-        window.alert(
-          "The movie is not in your watched list. Please add it to your list of watched movies first."
-        );
         resetRating();
         console.error("Post Error:", error.response.data);
         console.error("Status Code:", error.response.status);
+        toast.error(
+          "Rating failed to update. Movie must be in your Watched list."
+        );
       } else if (error.request) {
         // The request was made but no response was received
         console.error("Request Error:", error.request);
+        toast.error("Rating failed to update.");
       } else {
         // Something happened in setting up the request that triggered an Error
         console.error("Error:", error.message);
+        toast.error("Rating failed to update.");
       }
     }
   };
@@ -65,7 +69,9 @@ export const MovieProvider = ({ children }) => {
         }
       );
       console.log(response.data);
+      toast.success(`Movie was successfully added to list.`);
     } catch (error) {
+      toast.error("Movie was not added to list.");
       if (error.response) {
         // setErrorMessage("You must be a user to add to list.");
         // The server responded with a status code that falls out of the range of 2xx
@@ -99,7 +105,9 @@ export const MovieProvider = ({ children }) => {
         }
       );
       console.log(response.data);
+      toast.success("Movie successfully removed from list.");
     } catch (error) {
+      toast.error("Movie removal from list failed.");
       if (error.response) {
         // The server responded with a status code that falls out of the range of 2xx
         console.error("Post Error:", error.response.data);

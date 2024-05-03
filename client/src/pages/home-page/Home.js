@@ -23,8 +23,6 @@ function Home() {
     setHeroMovies(firstThreeMovies);
   }, [trendingMovies]);
 
-  console.log(process.env.REACT_APP_API_URL);
-
   useEffect(() => {
     const getTrendingMovies = async () => {
       try {
@@ -60,15 +58,15 @@ function Home() {
 
   return (
     <div className="sub-page">
-      <Reveal>
+      <Reveal width="100%">
         <section id="hero-section" className="section-container">
           <div id="text-container">
+            <p id="bold-hero-text" className="hero-section-text">
+              Create your Movie List today.
+            </p>
             <p className="hero-section-text">
               Save your favourite movies and create your own personalized movie
               list so that you always know what to watch next!
-            </p>
-            <p id="bold-hero-text" className="hero-section-text">
-              Create your Movie List today.
             </p>
             <button
               id="hero-button"
@@ -88,7 +86,7 @@ function Home() {
       <Reveal>
         <MovieSlider genre="Trending" movies={trendingMovies} />
       </Reveal>
-      <Reveal>
+      <Reveal width="100%">
         <section id="ai-suggestions" className="section-container">
           <div id="ai-sugg-text-container">
             <strong id="ai-sugg-main-text" className="home-text">
@@ -110,8 +108,8 @@ function Home() {
           </div>
         </section>
       </Reveal>
-      <Reveal>
-        {!getToken() && (
+      {!getToken() && (
+        <Reveal width="100%">
           <section id="cta" className="section-container">
             <div id="cta-div">
               <strong id="cta-title" className="cta-text">
@@ -132,8 +130,8 @@ function Home() {
               </button>
             </div>
           </section>
-        )}
-      </Reveal>
+        </Reveal>
+      )}
     </div>
   );
 }

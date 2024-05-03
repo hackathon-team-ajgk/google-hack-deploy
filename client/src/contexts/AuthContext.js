@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext } from "react";
+import { toast } from "sonner";
 
 // Create the context with a default undefined value
 const AuthContext = createContext(undefined);
@@ -17,6 +18,7 @@ export const AuthProvider = ({ children }) => {
   const handleLogout = () => {
     localStorage.removeItem("userSession");
     localStorage.removeItem("userData");
+    toast.success("User logged out successfully. Come back soon!");
   };
 
   // Function to get the user's username from localStorage

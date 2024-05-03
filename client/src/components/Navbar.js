@@ -2,7 +2,7 @@ import React from "react";
 import { NavbarData } from "./NavbarData";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ display }) {
   const nav = useNavigate();
   const location = useLocation();
 
@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <ul className="navbar">
+      <ul style={{ display }} className="navbar">
         {NavbarData.map((val, key) => (
           <li
             id={location.pathname === val.path ? "active" : ""}

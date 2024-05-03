@@ -58,9 +58,9 @@
 
 #user-bio {
   font-size: large;
-  background-color: #5c5c5c;
+  background-image: linear-gradient(to bottom right, rgba(85, 94, 167, 0.8), rgba(30, 31, 61, 0.8));
   width: 225px;
-  max-height: 200px;
+  height: 102px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 10px black;
@@ -71,15 +71,15 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #4c4c4c;
-  color: white;
+  background-image: linear-gradient(to bottom, rgb(69, 73, 125), rgb(64, 75, 197));
+  color: rgb(237, 238, 247);
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
 }
 
 textarea::placeholder {
-  color: white;
+  color: rgb(237, 238, 247);
   font-size: large;
   padding-left: 5px;
 }
@@ -90,7 +90,7 @@ textarea::placeholder {
 
 .bio-btn {
   width: fit-content;
-  background-color: #4c4c4c;
+  background-color: rgba(29, 35, 144, 1);
   color: white;
   font-size: large;
   height: 40px;
@@ -101,8 +101,8 @@ textarea::placeholder {
 }
 
 .bio-btn:hover {
-  box-shadow: 4px 4px 10px black;
-  background-color: #5c5c5c;
+  box-shadow: 2px 2px 6px 2px black;
+  background-color: rgba(29, 35, 144, 0.6)
 }
 
 .bio-btn-group {
@@ -135,7 +135,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-height: 880px;
+    min-height: 1000px;
   }
   #user-details {
     border-right: none;

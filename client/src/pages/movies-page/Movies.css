@@ -13,37 +13,53 @@
   min-height: 90px;
   max-width: 400px;
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  background-color: rgba(148, 150, 225, 0.05);
 }
 
 #search-bar-container {
   padding: 10px;
   align-self: center;
+  max-width: 90%;
+}
+
+#ai-suggestions-by-genre {
+  background-color: rgba(
+    148,
+    150,
+    225,
+    0.05
+  ); /*coloring of genres bar in Movies*/
 }
 
 #search-form {
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #search-input {
   height: 30px;
-  max-width: 250px;
   border-radius: 5px;
   border: none;
   font-size: 20px;
-  background-color: #4c4c4c;
+  background-color: rgba(148, 150, 225, 0.7);
   color: #ffffff;
   padding: 10px;
-  margin-right: 20px;
   transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+#search-input::placeholder {
+  color: rgb(237, 238, 247);
 }
 
 #search-input:hover {
   filter: brightness(90%);
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 5px black;
+  background-color: rgba(71, 74, 118, 0.9);
 }
 
 #search-submit-btn {
@@ -82,8 +98,8 @@
 .genres-container {
   height: 40px;
   font-size: 20px;
-  color: white;
-  background-color: #4c4c4c;
+  color: rgb(237, 238, 247);
+  background-color: rgba(148, 150, 225, 0.7);
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 8px black;
@@ -93,6 +109,7 @@
 
 .genres-container:hover {
   box-shadow: 4px 4px 12px black;
+  background-color: rgba(71, 74, 118, 0.9);
 }
 
 #get-recs-btn {
@@ -137,7 +154,10 @@
 @media (max-width: 768px) {
   #search-input {
     font-size: 20px;
-    min-width: 490px;
+    min-width: 80%;
+  }
+  #search-form {
+    min-width: 100%;
   }
   .search-recs-container {
     max-width: 640px;
@@ -159,10 +179,43 @@
   .search-recs-container {
     max-width: 475px;
   }
+  #search-bar-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  #search-submit-btn {
+    display: none;
+  }
   #ai-suggestions-by-genre {
     min-width: 100%;
   }
+  #search-movie-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .search-recs-container {
+    max-width: 80vw;
+  }
+  #search-form {
+    max-width: 100%;
+  }
   #search-input {
-    min-width: 330px;
+    max-width: 50px;
+  }
+  .genre-recs-container {
+    justify-content: center;
+    min-width: 100%;
+  }
+  .genres-container {
+    font-size: 16px;
+    max-width: 100px;
+  }
+  #get-recs-btn {
+    font-size: 14px;
+  }
+  .reveal {
+    max-width: 304px;
   }
 }

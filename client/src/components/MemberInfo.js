@@ -15,7 +15,7 @@ export const teamInfo = [
       "https://media.tenor.com/o-wNCEq_6f0AAAAe/pompo-the-cinephile-typing-fast.png",
     bio: "Software Engineering and Business student at the University of Calgary. I love to read, mountain bike, travel, learn languages, and watch anime. Visit my LinkedIn to tell me what we can improve 🙋!",
     github: "https://github.com/Ernesto-B",
-    linkedIn: "linkedin.com/in/ernesto-barreto-58a9b0258",
+    linkedIn: "https://www.linkedin.com/in/ernesto-barreto-58a9b0258",
   },
   {
     name: "Gabriel Toro",
