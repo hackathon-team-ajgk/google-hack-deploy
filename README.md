@@ -10,9 +10,9 @@ MyMovieList is a comprehensive web application to help movie enthusiasts manage 
 
 User and Application Interface: The user interacts with the application through our user interface built with React. The user inputs are sent from the UI to the backend server using REST API requests 
 
-Frontend: The front-end is responsible for presenting information to the user and collecting user input. It then communicates with the server via GET requests and receives the data that it then displays to the user. 
+Frontend: The front-end is responsible for presenting information to the user and collecting user input. It then communicates with the server via GET requests and receives the data that it then displays to the user. The Front-End performs CRUD (Create, Read, Update, Delete) operations itself and the server is calling the functions inside the movieAPI handler and the GeminiApi handler responses 
 
-Backend Server: The server splits into different handlers for their own specific functions; movieAPIHandler for the movie-related requests and geminiAPIHandler for requests handled by the Gemini API. Each of the different handles processes data, performs CRUD (Create, Read, Update, Delete) operations and communicates with the database.  
+Backend Server: The server splits into different handlers for their own specific functions; movieAPIHandler for the movie-related requests and geminiAPIHandler for requests handled by the Gemini API
 
 Database: MongoDB is then used as the database solution, storing historical and operation data that the server queries or modifies. This database is integral for persisting data that is accessed and manipulated by the API Handlers.  
 
