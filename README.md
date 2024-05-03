@@ -1,12 +1,12 @@
 MYMOVIELIST – Your personal Movie Organizer 
 
  
-OVERVIEW  
+ ## OVERVIEW  
 
 MyMovieList is a comprehensive web application to help movie enthusiasts manage their personal movie collections, discover and get recommendations for movies to watch, and organize their whole personal viewing experience. This project combines user-friendly design with important features such as user authentication, personalized lists, and extensive movie details, all tailored to enhance your own personal watching experience.  
 
 
-HOW FRONTEND CONNECTS WITH BACKEND? 
+## HOW FRONTEND CONNECTS WITH BACKEND? 
 
 User and Application Interface: The user interacts with the application through our user interface built with React. The user inputs are sent from the UI to the backend server using REST API requests 
 
@@ -19,7 +19,7 @@ Database: MongoDB is then used as the database solution, storing historical and 
 All in all, the user sends a request from the front end which is received by the server. The server processes the request, fetching or storing data in MongoDB as necessary. The requested data or result of the operation is then sent back to the front end as a REST response, which updates the UI accordingly.  
 
 
-Main Features 
+## Main Features 
 
 MyMovieList offers a variety of features that makes it have seamless navigation across the various sections, ensuring a fluid user experience:  
 
