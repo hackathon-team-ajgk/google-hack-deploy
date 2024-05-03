@@ -17,6 +17,7 @@ Database: MongoDB is then used as the database solution, storing historical and 
 All in all, the user sends a request from the front end which is received by the server. The server processes the request, fetching or storing data in MongoDB as necessary. The requested data or result of the operation is then sent back to the front end as a REST response, which updates the UI accordingly.
 
 Main Features 
+
   MyMovieList offers a variety of features that makes it have seamless navigation across the various sections, ensuring a fluid user experience:
   Homepage: Displays a curated selection of the latest and trending movies to keep users engaged with fresh and trending movies.
   User Authentication: Incorporates necessary security measures for user registration and login, safeguarding user data.
@@ -26,6 +27,7 @@ Main Features
   Movie Details: Click on any movie to get detailed information like cast, crew, synopsis 
   Your List: Provides a personalized watchlist where users can save and manage their favorite movies and save future films for future viewing.
   About Page: Offers insights into the application's purpose, its features, and the minds behind its development
+
 
 Contributing 
 Interested in contributing? Fantastic! Here are some ways you can help:
