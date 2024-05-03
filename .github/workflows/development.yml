@@ -25,7 +25,15 @@ jobs:
 
     
     - name: npm Install
-      run: npm ci
+      run: |
+      cd ./server
+      npm ci
+      cd ../client
+      npm ci
 
     - name: test
-      run: npm test
+      run: |
+      cd ./server
+      npm test
+      cd ../client
+      npm test
