@@ -63,12 +63,12 @@ function Home() {
       <Reveal>
         <section id="hero-section" className="section-container">
           <div id="text-container">
+            <p id="bold-hero-text" className="hero-section-text">
+              Create your Movie List today.
+            </p>
             <p className="hero-section-text">
               Save your favourite movies and create your own personalized movie
               list so that you always know what to watch next!
-            </p>
-            <p id="bold-hero-text" className="hero-section-text">
-              Create your Movie List today.
             </p>
             <button
               id="hero-button"

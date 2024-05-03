@@ -181,12 +181,12 @@ a:visited {
   gap: 1rem;
   width: 600px;
   height: 500px;
-  background-color: #4c4c4c;
+  background-image: linear-gradient(to bottom right, rgba(48, 54, 103, 0.8), rgba(30, 31, 61, 0.8));
   border-radius: 10px;
 }
 
 #form-heading {
-  text-align: start;
+  text-align: center;
   margin-top: 0;
   margin-bottom: 20px;
   width: 524px;
@@ -202,11 +202,10 @@ a:visited {
   height: 50px;
   width: 250px;
   padding-left: 10px;
-
   font-size: large;
   border: none;
   color: #f0f0f0;
-  background-color: #3c3c3c;
+  background-image: linear-gradient(to bottom, rgb(30, 31, 61), rgb(38, 45, 125));
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -214,23 +213,46 @@ a:visited {
 .contact-input::placeholder {
   font-size: large;
   padding-left: 10px;
-  color: #f0f0f0;
+  color: hsla(0, 0%, 100%, 0.7);
 }
 
 .contact-input:hover {
   box-shadow: 2px 2px 6px black;
+  background-color: rgba(71, 74, 118,0.9);
+}
+
+#email-input {
+  background-image: linear-gradient(to bottom, rgb(38, 45, 125), rgb(69, 73, 125));
+}
+
+#email-input:hover {
+  background-color: rgba(110, 110, 198, 0.7);
+}
+
+#phone-input {
+  background-image: linear-gradient(to bottom, rgb(38, 45, 125), rgb(69, 73, 125));
+}
+
+#phone-input:hover {
+  background-color: rgba(110, 110, 198, 0.7);
 }
 
 #address-input {
   width: 528px;
+  background-image: linear-gradient(to bottom, rgb(69, 73, 125), rgb(64, 75, 197));
+}
+
+#address-input:hover {
+  background-color: rgba(73, 72, 171, 0.7);
 }
 
 #contact-textarea {
   margin: 0;
   max-width: 518px;
-  background-color: #1b1b1b;
+  background-image: linear-gradient(to bottom, rgb(64, 75, 197), rgb(8, 15, 88));
   border-radius: 10px;
   transition: box-shadow 0.3s ease-in-out;
+  border: none;
 }
 
 #contact-textarea::placeholder {
@@ -243,10 +265,15 @@ a:visited {
 }
 
 #contact-button {
-  background-color: #3c3c3c;
+  background-color: rgb(10, 16, 101);
   width: 100px;
   height: 50px;
-  border-radius: 20px;
+  border-radius: 15px;
+}
+
+#contact-button:hover {
+  box-shadow: 4px 4px 8px black;
+  filter: brightness(70%);
 }
 
 @media (max-width: 1848px) {

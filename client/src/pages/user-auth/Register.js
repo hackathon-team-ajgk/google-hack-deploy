@@ -98,17 +98,17 @@ function Register() {
         />
 
         <label className="form-label" htmlFor="password-field">
-          Re-enter Password:
+          Re-Enter Password:
         </label>
         <input
-          // id="password-field"
+          id="re-password-field"
           className="form-input"
           type="password"
           onChange={(e) => {
             setConfirmPassword(e.target.value);
           }}
           value={confirmPassword}
-          placeholder="Enter Password"
+          placeholder="Re-Enter Password"
           title=""
           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
           autoComplete="new-password"
