@@ -18,7 +18,7 @@ All in all, the user sends a request from the front end which is received by the
 
 Main Features 
 
-  MyMovieList offers a variety of features that makes it have seamless navigation across the various sections, ensuring a fluid user experience:
+ 	MyMovieList offers a variety of features that makes it have seamless navigation across the various sections, ensuring a fluid user experience:
   Homepage: Displays a curated selection of the latest and trending movies to keep users engaged with fresh and trending movies.
   User Authentication: Incorporates necessary security measures for user registration and login, safeguarding user data.
   User Profile: Allows users to personalize their own experience by viewing and editing their profile information
