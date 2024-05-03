@@ -172,7 +172,11 @@ a:visited {
   gap: 1rem;
   width: 600px;
   height: 500px;
-  background-image: linear-gradient(to bottom right, rgba(48, 54, 103, 0.8), rgba(30, 31, 61, 0.8));
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(48, 54, 103, 0.8),
+    rgba(30, 31, 61, 0.8)
+  );
   border-radius: 10px;
 }
 
@@ -196,7 +200,11 @@ a:visited {
   font-size: large;
   border: none;
   color: #f0f0f0;
-  background-image: linear-gradient(to bottom, rgb(30, 31, 61), rgb(38, 45, 125));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(30, 31, 61),
+    rgb(38, 45, 125)
+  );
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -209,11 +217,15 @@ a:visited {
 
 .contact-input:hover {
   box-shadow: 2px 2px 6px black;
-  background-color: rgba(71, 74, 118,0.9);
+  background-color: rgba(71, 74, 118, 0.9);
 }
 
 #email-input {
-  background-image: linear-gradient(to bottom, rgb(38, 45, 125), rgb(69, 73, 125));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(38, 45, 125),
+    rgb(69, 73, 125)
+  );
 }
 
 #email-input:hover {
@@ -221,7 +233,11 @@ a:visited {
 }
 
 #phone-input {
-  background-image: linear-gradient(to bottom, rgb(38, 45, 125), rgb(69, 73, 125));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(38, 45, 125),
+    rgb(69, 73, 125)
+  );
 }
 
 #phone-input:hover {
@@ -230,7 +246,11 @@ a:visited {
 
 #address-input {
   width: 528px;
-  background-image: linear-gradient(to bottom, rgb(69, 73, 125), rgb(64, 75, 197));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(69, 73, 125),
+    rgb(64, 75, 197)
+  );
 }
 
 #address-input:hover {
@@ -240,7 +260,11 @@ a:visited {
 #contact-textarea {
   margin: 0;
   max-width: 518px;
-  background-image: linear-gradient(to bottom, rgb(64, 75, 197), rgb(8, 15, 88));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(64, 75, 197),
+    rgb(8, 15, 88)
+  );
   border-radius: 10px;
   transition: box-shadow 0.3s ease-in-out;
   border: none;
@@ -419,9 +443,11 @@ a:visited {
   }
   #contact-section {
     max-width: 80vw;
-    min-height: fit-content;
   }
   .contact-us {
     max-width: 100%;
+  }
+  .see-more-less {
+    display: none;
   }
 }

@@ -14,7 +14,7 @@ export const Reveal = ({ children, width = "fit-content" }) => {
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} style={{ width }}>
+    <div className="reveal" ref={ref} style={{ width }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

@@ -84,16 +84,18 @@ function Movies() {
           <SearchMovie onSearch={handleSearch} />
         </div>
       </Reveal>
-      <Reveal>
-        {searchedMovies.length > 0 && (
+
+      {searchedMovies.length > 0 && (
+        <Reveal width="100%">
           <MovieSlider genre="Search Results" movies={searchedMovies} />
-        )}
-      </Reveal>
-      <Reveal>
-        {recommendations.length > 0 && (
+        </Reveal>
+      )}
+
+      {recommendations.length > 0 && (
+        <Reveal width="100%">
           <MovieSlider genre={`Recommendations`} movies={recommendations} />
-        )}
-      </Reveal>
+        </Reveal>
+      )}
       <Reveal>
         <MovieSlider genre="Trending" movies={trendingMovies} />
       </Reveal>

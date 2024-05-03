@@ -58,7 +58,7 @@ function Home() {
 
   return (
     <div className="sub-page">
-      <Reveal>
+      <Reveal width="100%">
         <section id="hero-section" className="section-container">
           <div id="text-container">
             <p id="bold-hero-text" className="hero-section-text">
@@ -86,7 +86,7 @@ function Home() {
       <Reveal>
         <MovieSlider genre="Trending" movies={trendingMovies} />
       </Reveal>
-      <Reveal width="fit-content">
+      <Reveal width="100%">
         <section id="ai-suggestions" className="section-container">
           <div id="ai-sugg-text-container">
             <strong id="ai-sugg-main-text" className="home-text">
@@ -109,7 +109,7 @@ function Home() {
         </section>
       </Reveal>
       {!getToken() && (
-        <Reveal width="fit-content">
+        <Reveal width="100%">
           <section id="cta" className="section-container">
             <div id="cta-div">
               <strong id="cta-title" className="cta-text">

@@ -26,7 +26,12 @@
 }
 
 #ai-suggestions-by-genre {
-  background-color: rgba(148, 150, 225, 0.05); /*coloring of genres bar in Movies*/
+  background-color: rgba(
+    148,
+    150,
+    225,
+    0.05
+  ); /*coloring of genres bar in Movies*/
 }
 
 #search-form {
@@ -54,7 +59,7 @@
 #search-input:hover {
   filter: brightness(90%);
   box-shadow: 2px 2px 5px black;
-  background-color: rgba(71, 74, 118,0.9);
+  background-color: rgba(71, 74, 118, 0.9);
 }
 
 #search-submit-btn {
@@ -104,7 +109,7 @@
 
 .genres-container:hover {
   box-shadow: 4px 4px 12px black;
-  background-color: rgba(71, 74, 118,0.9);
+  background-color: rgba(71, 74, 118, 0.9);
 }
 
 #get-recs-btn {
@@ -192,7 +197,6 @@
 @media (max-width: 475px) {
   .search-recs-container {
     max-width: 80vw;
-    margin-left: 40px;
   }
   #search-form {
     max-width: 100%;
@@ -210,5 +214,8 @@
   }
   #get-recs-btn {
     font-size: 14px;
+  }
+  .reveal {
+    max-width: 304px;
   }
 }
