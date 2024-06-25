@@ -83,7 +83,7 @@ function Home() {
           </div>
         </section>
       </Reveal>
-      <Reveal>
+      <Reveal width="100%">
         <MovieSlider genre="Trending" movies={trendingMovies} />
       </Reveal>
       <Reveal width="100%">
@@ -121,6 +121,7 @@ function Home() {
                 gives you suggestions if you're still not sure!
               </p>
               <button
+                id="cta-btn"
                 className="home-button"
                 onClick={() => {
                   navigate("/register");

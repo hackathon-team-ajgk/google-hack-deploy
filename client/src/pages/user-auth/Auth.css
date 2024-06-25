@@ -144,3 +144,13 @@
   color: rgb(237, 238, 247);
   font-size: large;
 }
+
+@media (max-width: 475px) {
+  .user-auth-form {
+    width: 300px;
+    padding: 20px;
+  }
+  .link {
+    font-size: small;
+  }
+}

@@ -366,6 +366,9 @@ a:visited {
   #title {
     padding-left: 20px;
   }
+  #login-button {
+    margin-right: 20px;
+  }
   .sub-page {
     max-width: 80vw;
   }

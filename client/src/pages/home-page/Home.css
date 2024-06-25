@@ -397,8 +397,7 @@
 }
 
 #cta-div {
-  width: 60%;
-  padding: 20px;
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -577,7 +576,7 @@
     min-height: fit-content;
   }
   #hero-button {
-    font-size: 16px;
+    font-size: 18px;
     width: 150px;
     height: 50px;
     margin-top: 0;
@@ -605,5 +604,24 @@
   }
   .reveal {
     max-width: fit-content;
+  }
+  #cta {
+    min-height: auto;
+    max-height: 350px;
+  }
+  #cta-div {
+    padding: 0;
+  }
+  #cta-title {
+    font-size: 20px;
+  }
+  .cta-text {
+    font-size: 16px;
+  }
+  #cta-btn {
+    font-size: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
   }
 }
